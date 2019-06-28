@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightTrackSharp", "FlightTrackSharp\FlightTrackSharp.csproj", "{078935FD-B412-4F4E-BC65-16FB3010D193}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightTrackSharp", "FlightTrackSharp\FlightTrackSharp.csproj", "{078935FD-B412-4F4E-BC65-16FB3010D193}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
