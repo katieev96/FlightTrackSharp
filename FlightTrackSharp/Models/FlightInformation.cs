@@ -7,6 +7,7 @@ namespace FlightTrackSharp.Models
 {
     public class FlightInformation
     {
+        public Guid Id { get; set; }
         public DateTime DateOfFlight { get; set; }
         public string Route { get; set; }
         public string Comments { get; set; }

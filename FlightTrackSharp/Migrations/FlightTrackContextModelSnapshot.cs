@@ -69,6 +69,58 @@ namespace FlightTrackSharp.Migrations
                     b.ToTable("AircraftModel");
                 });
 
+            modelBuilder.Entity("FlightTrackSharp.Models.FlightInformation", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<Guid?>("AircraftId");
+
+                    b.Property<int>("Approaches");
+
+                    b.Property<bool>("ApproachesHold");
+
+                    b.Property<double>("CFI");
+
+                    b.Property<string>("Comments");
+
+                    b.Property<double>("CrossCountry");
+
+                    b.Property<DateTime>("DateOfFlight");
+
+                    b.Property<double>("Dual");
+
+                    b.Property<double>("FullStopDay");
+
+                    b.Property<double>("FullStopNight");
+
+                    b.Property<double>("GroundSim");
+
+                    b.Property<double>("IMC");
+
+                    b.Property<double>("Night");
+
+                    b.Property<double>("PIC");
+
+                    b.Property<string>("Route");
+
+                    b.Property<double>("SIC");
+
+                    b.Property<double>("SimulatedInstrument");
+
+                    b.Property<double>("Solo");
+
+                    b.Property<double>("TotalLandings");
+
+                    b.Property<double>("TotalTime");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AircraftId");
+
+                    b.ToTable("FlightInformation");
+                });
+
             modelBuilder.Entity("FlightTrackSharp.Models.Aircraft", b =>
                 {
                     b.HasOne("FlightTrackSharp.Models.AircraftManufacturer", "AircraftManufacturer")
@@ -78,6 +130,13 @@ namespace FlightTrackSharp.Migrations
                     b.HasOne("FlightTrackSharp.Models.AircraftModel", "AircraftModel")
                         .WithMany()
                         .HasForeignKey("AircraftModelId");
+                });
+
+            modelBuilder.Entity("FlightTrackSharp.Models.FlightInformation", b =>
+                {
+                    b.HasOne("FlightTrackSharp.Models.Aircraft", "Aircraft")
+                        .WithMany()
+                        .HasForeignKey("AircraftId");
                 });
 #pragma warning restore 612, 618
         }
