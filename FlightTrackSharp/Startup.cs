@@ -43,8 +43,6 @@ namespace FlightTrackSharp
 
             services.AddMvc(config =>
             {
-                // using Microsoft.AspNetCore.Mvc.Authorization;
-                // using Microsoft.AspNetCore.Authorization;
                 var policy = new AuthorizationPolicyBuilder()
                                  .RequireAuthenticatedUser()
                                  .Build();

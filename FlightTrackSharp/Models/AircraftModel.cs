@@ -9,7 +9,5 @@ namespace FlightTrackSharp.Models
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-
-        public virtual Aircraft Aircraft { get; set; }
     }
 }
